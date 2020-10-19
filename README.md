@@ -48,7 +48,7 @@ authenticated.
 and transmission of the tag authentication
 challenge message 𝐷.
 
-𝐾̈** = 𝑅𝑜𝑡 (𝐾 ⊕𝑛1, 𝑛2)
+𝐾̈* = 𝑅𝑜𝑡 (𝐾 ⊕𝑛1, 𝑛2)
 
 𝐷 = (𝐾̈ ∗ ⊕ 𝑛2) + 𝑛1
 

@@ -14,8 +14,10 @@ architecture of the UMAP is as follows:
 
 (1) The reader initiates the communication by sending a
 “Hello” message to the tag.
+
 (2) As a response, the tag transmits the 𝐼𝐷𝑆 stored in its
 dynamic memory.
+
 (3) After successful tag identification through the
 database, the reader generates two pseudorandom numbers 𝑛1 and 𝑛2. 
 If the 𝐼𝐷𝑆 = 𝐼𝐷𝑆𝑛𝑒𝑤, the reader sets an internal flag 𝑓 = 0; otherwise
@@ -36,6 +38,7 @@ and sends message 𝑋 = 𝐴 ‖ 𝐵 ‖ 𝐶 ‖ 𝑓 to the tag.
 the value of the key 𝐾 based on the flag status.
 After that 𝑛1 and 𝑛2 are extracted and the reader is
 authenticated.
+
 (5) The successful reader verification leads to the calculation
 and transmission of the tag authentication
 challenge message 𝐷.

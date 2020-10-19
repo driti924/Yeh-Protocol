@@ -26,12 +26,17 @@ the tag’s 𝐼𝐷. After key updation, the reader calculates
 and sends message 𝑋 = 𝐴 ‖ 𝐵 ‖ 𝐶 ‖ 𝑓 to the tag.
 
 𝐴 = (𝐼𝐷𝑆 ⊕𝐾 ) ⊕ 𝑛1
+
 𝐵 = (𝐼𝐷𝑆 ∨ 𝐾) ⊕ 𝑛2
+
 𝐾∗ = 𝑅𝑜𝑡 (𝐾 ⊕𝑛2, 𝑛1)
+
 𝐶 = (𝐾∗ ⊕ 𝑛1) + 𝑛2
+
 𝑓 = 𝑓𝑙𝑎𝑔 𝑏𝑖𝑡
 
 𝑓 = 0 𝑖𝑓 𝐼𝐷𝑆 = 𝐼𝐷𝑆𝑁𝐸𝑊
+
 𝑓 = 1 𝑖𝑓 𝐼𝐷𝑆 = 𝐼𝐷𝑆𝑂𝐿𝐷
 
 (4) Upon receiving the challenge message, the tag updates
@@ -42,12 +47,16 @@ authenticated.
 (5) The successful reader verification leads to the calculation
 and transmission of the tag authentication
 challenge message 𝐷.
+
 𝐾̈** = 𝑅𝑜𝑡 (𝐾 ⊕𝑛1, 𝑛2)
+
 𝐷 = (𝐾̈ ∗ ⊕ 𝑛2) + 𝑛1
 
 (6) In case of successful mutual authentication, the
 dynamic memory on both sides is updated.
+
 𝐼𝐷𝑆𝑁𝑒𝑤 = (𝐼𝐷𝑆 + (𝐼𝐷 ⊕ 𝐾̈ ∗)) ⊕𝑛1⊕ 𝑛2
+
 𝐾𝑁𝑒𝑤 = 𝐾∗
 
 
